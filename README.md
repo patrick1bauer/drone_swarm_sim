@@ -19,19 +19,29 @@ git init
 ```bash
 git pull https://github.com/patrick1bauer/drone_swarm_sim.git 
 ```
-6. Source ROS files
+6. Make sure ROS_PACKAGE_PATH environment variable includes the directory you're in.
+```bash
+echo $ROS_PACKAGE_PATH
+```
+7. Get the latest TurtleBot3 models
+```bash
+cd src
+git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
+cd ..
+```
+8. Set the TURTLEBOT3_MODEL environment variable to burger
+```bash
+export TURTLEBOT3_MODEL=burger
+```
+9. Source ROS files
 ```bash
 source /opt/ros/<distro>/setup.bash
 ```
-7. Make the catkin workspace
+10. Make the catkin workspace
 ```bash
 catkin_make
 ```
-8. Source the build
+11. Source the build
 ```bash
 source devel/setup.bash
-```
-9. Make sure ROS_PACKAGE_PATH environment variable includes the directory you're in.
-```bash
-echo $ROS_PACKAGE_PATH
 ```
