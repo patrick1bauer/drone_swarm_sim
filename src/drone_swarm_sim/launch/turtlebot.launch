@@ -2,9 +2,11 @@
     <arg name="robot_name"/>
     <arg name="init_pose"/>
 
-    <node name="spawn_minibot_model" pkg="gazebo_ros" type="spawn_model"
-     args="$(arg init_pose) -urdf -param /robot_description -model $(arg robot_name)"
-     respawn="false" />
-     
-
+    <node
+        name="spawn_minibot_model"
+        pkg="gazebo_ros"
+        type="spawn_model"
+        args="$(arg init_pose) -urdf -param /robot_description -model $(arg robot_name)"
+        respawn="false"
+    />
 </launch>
