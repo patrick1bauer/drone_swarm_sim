@@ -32,7 +32,7 @@ cd ..
 8. Get the latest sjtu-drone models
 ```bash
 cd src
-git clone
+git clone https://github.com/tahsinkose/sjtu-drone.git
 cd ..
 ```
 9. Change the path of the sjtu-drone mesh files:
