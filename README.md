@@ -29,19 +29,30 @@ cd src
 git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
 cd ..
 ```
-8. Set the TURTLEBOT3_MODEL environment variable to burger
+8. Get the latest sjtu-drone models
+```bash
+cd src
+git clone
+cd ..
+```
+9. Change the path of the sjtu-drone mesh files:
+    In catkin_ws/src/sjtu-drone/urdf/sjtu_drone.urdf file, change the filepath on line 12 to:
+    /home/noah/catkin_ws/src/sjtu-drone/meshes/quadrotor_4.stl
+    and the filepath on line 18 to:
+    /home/noah/catkin_ws/src/sjtu-drone/meshes/quadrotor_4.dae
+10. Set the TURTLEBOT3_MODEL environment variable to burger
 ```bash
 export TURTLEBOT3_MODEL=burger
 ```
-9. Source ROS files
+11. Source ROS files
 ```bash
 source /opt/ros/<distro>/setup.bash
 ```
-10. Make the catkin workspace
+12. Make the catkin workspace
 ```bash
 catkin_make
 ```
-11. Source the build
+13. Source the build
 ```bash
 source devel/setup.bash
 ```
