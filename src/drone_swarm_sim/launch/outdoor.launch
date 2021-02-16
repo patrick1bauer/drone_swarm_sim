@@ -1,0 +1,16 @@
+<launch>
+  <param name="/use_sim_time" value="true" />
+
+  <!-- start world -->
+  <node
+    name="gazebo"
+    pkg="gazebo_ros"
+    type="gazebo"
+    args="$(find drone_swarm_sim)/world/outdoor.world"
+    respawn="false" output="screen"
+  />
+
+  
+  <!-- include our robots -->
+  <include file="$(find drone_swarm_sim)/launch/robots.launch"/>
+</launch>

@@ -44,15 +44,19 @@ cd ..
 ```bash
 export TURTLEBOT3_MODEL=burger
 ```
-11. Source ROS files
+11. set the GAZEBO_MODEL_PATH environment variable
+```bash
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/home/noah/catkin_ws/src/drone_swarm_sim/world/models
+```
+12. Source ROS files
 ```bash
 source /opt/ros/<distro>/setup.bash
 ```
-12. Make the catkin workspace
+13. Make the catkin workspace
 ```bash
 catkin_make
 ```
-13. Source the build
+14. Source the build
 ```bash
 source devel/setup.bash
 ```

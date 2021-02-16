@@ -6,45 +6,80 @@
   <group ns="robot1">
     <param name="tf_prefix" value="robot1_tf" />
     <include file="$(find drone_swarm_sim)/launch/turtlebot.launch" >
-      <arg name="init_pose" value="-x 5 -y 5 -z 0" />
+
+      <!-- Coordinates for my_world.world -->
+      <!-- <arg name="init_pose" value="-x 5 -y 5 -z 1" /> -->
+
+      <!-- Coordinates for small_city.world, Intersection 1 -->
+      <arg name="init_pose" value="-x 45 -y 0 -z 0" />
+
+      <!-- Coordinates for small_city.world, Intersection 2 -->
+      <!-- <arg name="init_pose" value="-x -17 -y 0 -z 0" /> -->
+
       <arg name="robot_name"  value="Robot1" />
     </include>
   </group>
 
-  <!-- BEGIN TURTLEBOT 2-->
+    <!-- BEGIN TURTLEBOT 2-->
   <group ns="robot2">
-    <param name="tf_prefix" value="robot2_tf" />
+    <param name="tf_prefix" value="robot1_tf" />
     <include file="$(find drone_swarm_sim)/launch/turtlebot.launch" >
-      <arg name="init_pose" value="-x -5 -y 5 -z 0" />
+
+      <!-- Coordinates for my_world.world -->
+      <!-- <arg name="init_pose" value="-x 5 -y 5 -z 1" /> -->
+
+      <!-- Coordinates for small_city.world, Intersection 1 -->
+      <!-- <arg name="init_pose" value="-x 45 -y 0 -z 0" /> -->
+
+      <!-- Coordinates for small_city.world, Intersection 2 -->
+      <arg name="init_pose" value="-x -17 -y 0 -z 0" />
+
       <arg name="robot_name"  value="Robot2" />
     </include>
   </group>
-  
-  <!-- BEGIN TURTLEBOT 3-->
-  <group ns="robot3">
-    <param name="tf_prefix" value="robot3_tf" />
-    <include file="$(find drone_swarm_sim)/launch/turtlebot.launch" >
-      <arg name="init_pose" value="-x 5 -y -5 -z 0" />
-      <arg name="robot_name"  value="Robot3" />
-    </include>
-  </group>
-  
-  <!-- BEGIN TURTLEBOT 4-->
-  <group ns="robot4">
-    <param name="tf_prefix" value="robot4_tf" />
-    <include file="$(find drone_swarm_sim)/launch/turtlebot.launch" >
-      <arg name="init_pose" value="-x -5 -y -5 -z 0" />
-      <arg name="robot_name"  value="Robot4" />
-    </include>
-  </group>
 
-    
   <!-- BEGIN DRONE 1-->
   <group ns="drone1">
     <param name="tf_prefix" value="drone1_tf" />
     <include file="$(find drone_swarm_sim)/launch/drone.launch" >
-      <arg name="init_pose" value="-x -6 -y -6 -z 1" />
-      <arg name="robot_name"  value="sjtu-drone" />
+      <arg name="init_pose" value="-x -70 -y -10 -z 0" />
+      <arg name="robot_name"  value="Drone1" />
+    </include>
+  </group>
+
+  <!-- BEGIN DRONE 2-->
+  <group ns="drone2">
+    <param name="tf_prefix" value="drone1_tf" />
+    <include file="$(find drone_swarm_sim)/launch/drone.launch" >
+      <arg name="init_pose" value="-x -70 -y -15 -z 0" />
+      <arg name="robot_name"  value="Drone2" />
+    </include>
+  </group>
+
+  <!-- BEGIN DRONE 3-->
+  <group ns="drone3">
+    <param name="tf_prefix" value="drone1_tf" />
+    <include file="$(find drone_swarm_sim)/launch/drone.launch" >
+      <arg name="init_pose" value="-x -70 -y -20 -z 0" />
+      <arg name="robot_name"  value="Drone3" />
+    </include>
+  </group>
+
+  <!-- BEGIN DRONE 4-->
+  <group ns="drone4">
+    <param name="tf_prefix" value="drone1_tf" />
+    <include file="$(find drone_swarm_sim)/launch/drone.launch" >
+      <arg name="init_pose" value="-x -70 -y -25 -z 0" />
+      <arg name="robot_name"  value="Drone4" />
+    </include>
+  </group>
+
+  <!-- BEGIN DRONE 5-->
+  <group ns="drone5">
+    <param name="tf_prefix" value="drone1_tf" />
+    <include file="$(find drone_swarm_sim)/launch/drone.launch" >
+      <arg name="init_pose" value="-x -70 -y -30 -z 0" />
+      <arg name="robot_name"  value="Drone5" />
     </include>
   </group>
 
